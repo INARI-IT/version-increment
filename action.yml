@@ -45,6 +45,11 @@ inputs:
       Prefix the tag with a string (defaults to empty string).  e.g. if set to `@org/product/` the action will filter by this prefix and return `@org/product/1.2.3` in `prefixed-version` output
     required: false
     default: ''
+  pre_release_branch_suffix:
+    description: |
+      Suffix to use if action target non-release branch. default to 'pre'.
+    required: false
+    default: 'pre'
 
 outputs:
   current-version:
@@ -110,4 +115,4 @@ runs:
         scheme: ${{ inputs.scheme }}
         release_branch: ${{ inputs.release_branch }}
         use_api: ${{ inputs.use_api }}
-        base_ref: ${{ inputs.base_ref }}
+        pre_release_branch_suffix: ${{ inputs.pre_release_branch_suffix }}

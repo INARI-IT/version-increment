@@ -119,7 +119,7 @@ fi
 
 # add pre-release info to version if not the default branch
 if [[ "${current_ref}" != "refs/heads/${default_branch}" ]] ; then
-    pre_release="${base_ref}.${git_commit}"
+    pre_release="${pre_release_branch_suffix}.${git_commit}"
     if [[ "${pep440:-}" == 'true' ]] ; then
         new_version="${new_version}+${pre_release}"
     else
