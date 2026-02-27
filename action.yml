@@ -110,3 +110,4 @@ runs:
         scheme: ${{ inputs.scheme }}
         release_branch: ${{ inputs.release_branch }}
         use_api: ${{ inputs.use_api }}
+        base_ref: ${{ inputs.base_ref }}
